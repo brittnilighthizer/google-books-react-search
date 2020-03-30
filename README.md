@@ -2,7 +2,7 @@
 
 <!-- GIF here -->
 
-<!-- Click [HERE](link here) to see on Heroku. -->
+Click [HERE](https://blooming-lowlands-84208.herokuapp.com) to see on Heroku.
 
 
 ```
