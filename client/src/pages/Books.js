@@ -21,7 +21,7 @@ function Books() {
 
   // Loads all books and sets them to books
   function loadBooks() {
-    API.getBooks()
+    API.getBooks(querySearch)
       .then(res =>
         setBooks(res.data)
       )
@@ -45,23 +45,23 @@ function Books() {
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    
+
     if (formObject.title) {
       setQuerySearch(formObject.title)
       handleGetBooks();
-      
+
     }
   };
 
 
   function handleGetBooks() {
     API.getBooks(this.state.querySearch)
-        .then(res => setBooks(res.data))
-        .catch(err => console.log(err));
-    }
-  };
+      .then(res => setBooks(res.data))
+      .catch(err => console.log(err));
+  }
 
 
+// render() {
   return (
     <Container fluid>
       <Row>
@@ -117,7 +117,8 @@ function Books() {
       </Row>
     </Container>
   )
-
+// };
+};
 
 
 export default Books;

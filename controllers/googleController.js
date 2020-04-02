@@ -6,7 +6,7 @@ module.exports = {
     // Make a request for a user with a given ID
     findAll: function(req, res) {
         const { query: params } = req;
-        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + title
+        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + { params })
         .then(function (response) {
             // handle success
             console.log(response);
